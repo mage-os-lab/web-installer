@@ -1,0 +1,46 @@
+{
+  "name": "mageos/web-installer",
+  "description": "MageOS - Web - Installer",
+  "type": "magento2-component",
+  "authors": [
+    {
+      "name": "Jakub Winkler",
+      "email": "jwinkler@qoliber.com",
+      "homepage": "https://qoliber.com",
+      "role": "Magento Ninja"
+    }
+  ],
+  "license": [
+    "OSL-3.0",
+    "AFL-3.0"
+  ],
+  "version": "1.0.0",
+  "extra": {
+    "map": [
+      [
+        ".htaccess",
+        "setup/.htaccess"
+      ],
+      [
+        "index.php",
+        "setup/index.php"
+      ],
+      [
+        "config",
+        "setup/config"
+      ],
+      [
+        "pub",
+        "setup/pub"
+      ],
+      [
+        "view",
+        "setup/view"
+      ],
+      [
+        "src/",
+        "setup/src"
+      ]
+    ]
+  }
+}
