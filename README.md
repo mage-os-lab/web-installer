@@ -11,6 +11,6 @@ composer create-project --repository-url=https://repo.mage-os.org/ mage-os/proje
 3. Download this module with
 ```shell
 composer config repositories.web-installer vcs https://github.com/mage-os-lab/web-installer
-composer require --dev mageos/web-installer dev-main #added dev-main here
+composer require --dev mageos/web-installer dev-main
 ```
 4. Open your browser to your virtual host name and you should get redirected to `/setup`
