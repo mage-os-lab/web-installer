@@ -1,5 +1,5 @@
 {
-  "name": "mageos/web-installer",
+  "name": "mage-os/web-installer",
   "description": "Mage-OS - Web Installer",
   "type": "magento2-component",
   "authors": [
@@ -14,7 +14,6 @@
     "OSL-3.0",
     "AFL-3.0"
   ],
-  "version": "1.0.0",
   "extra": {
     "map": [
       [
