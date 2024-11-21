@@ -8,9 +8,11 @@ This is a BETA release for MageOS web installer.
 ```shell
 composer create-project --repository-url=https://repo.mage-os.org/ mage-os/project-community-edition .
 ```
-3. Download this module with
+
+2. Download this module with
 ```shell
 composer config repositories.web-installer vcs https://github.com/mage-os-lab/web-installer
-composer require --dev mageos/web-installer dev-main
+composer require --dev mage-os/web-installer dev-main
 ```
-4. Open your browser to your virtual host name and you should get redirected to `/setup`
+
+3. Open your browser to your virtual host name and you should get redirected to `/setup`
