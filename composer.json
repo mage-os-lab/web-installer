@@ -1,6 +1,6 @@
 {
   "name": "mageos/web-installer",
-  "description": "MageOS - Web - Installer",
+  "description": "Mage-OS - Web Installer",
   "type": "magento2-component",
   "authors": [
     {

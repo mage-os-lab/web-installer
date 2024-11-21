@@ -354,7 +354,7 @@ angular.module('readiness-check', ['remove-dialog'])
                 $actionString += $localStorage.packageTitle ? $localStorage.packageTitle : $localStorage.moduleName;
             } else {
                 if($state.current.type === 'install' || $state.current.type === 'upgrade') {
-                    $actionString += 'MageOS';
+                    $actionString += 'Mage-OS';
                     if ($state.current.type === 'upgrade' && $localStorage.packages.length > 1 ) {
                         $actionString += ' and selected components';
                     }

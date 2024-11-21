@@ -29,7 +29,7 @@
 
 <h2 class="page-sub-title">{{$state.current.header}}</h2>
 <p>
-    <span class="field-note">This section allows you to configure a NoSQL database for specific functionalities within Mage-OS. NoSQL databases can offer performance benefits and scalability for certain data types and operations</span>
+    <span class="field-note">This section allows you to configure a search engine for Mage-OS.</span>
 </p>
 
 <div
@@ -60,7 +60,7 @@
     <div class="row form-row">
         <div class="col-m-4">
             <label class="form-label required">
-                No SQL Database:
+                Search Engine:
             </label>
         </div>
         <div class="col-m-8">
@@ -70,7 +70,7 @@
                     ng-model="es.nosqldb"
                     ng-class="{'invalid': es.nosqldb.$invalid && es.submitted}"
                     tooltip-placement="right"
-                    tooltip-html-unsafe="Select the type of the NoSQL Database used in your project."
+                    tooltip-html-unsafe="Select the type of search engine to connect."
                     tooltip-trigger="focus"
                     tooltip-append-to-body="true"
             >
@@ -80,7 +80,7 @@
             </select>
             <p>
                 <span class="field-note">
-                    This section allows you to configure a NoSQL database for specific functionalities within Mage-OS.
+                    This section allows you to configure a search engine for specific functionalities within Mage-OS.
                 </span>
             </p>
         </div>
@@ -94,7 +94,7 @@
         >
             <div class="col-m-4">
                 <label class="form-label required" for="hostname">
-                    NoSQL Database Server Hostname
+                    Server Hostname
                 </label>
             </div>
             <div class="col-m-8">
@@ -102,7 +102,7 @@
                     id="hostname"
                     class="form-el-input"
                     tooltip-placement="right"
-                    tooltip="Location of the server that hosts your NoSQL database."
+                    tooltip="Domain or IP to connect to your search engine."
                     tooltip-trigger="focus"
                     tooltip-append-to-body="true"
                     type="text"
@@ -113,13 +113,13 @@
                 >
                 <p>
                     <span class="field-note">
-                         The server address or hostname where your NoSQL database (in this case, OpenSearch) is running
+                         The server address or hostname where ElasticSearch or OpenSearch is running
                     </span>
                 </p>
                 <div class="error-container">
-            <span ng-show="es.hostname.$error.required">
-                You must enter a valid host name. Please check the syntax and try again.
-            </span>
+                    <span ng-show="es.hostname.$error.required">
+                        You must enter a valid host name. Please check the syntax and try again.
+                    </span>
                 </div>
             </div>
         </div>
@@ -127,7 +127,7 @@
         <div class="row form-row">
             <div class="col-m-4">
                 <label class="form-label required" for="port">
-                    NoSQL Database Server Port
+                    Server Port
                 </label>
             </div>
             <div class="col-m-8">
@@ -135,7 +135,7 @@
                     id="port"
                     class="form-el-input"
                     tooltip-placement="right"
-                    tooltip="Dedicated Port on your NoSQL server used to connect to NoSQL database"
+                    tooltip="The port number to use to connect to your ElasticSearch or OpenSearch server"
                     tooltip-trigger="focus"
                     tooltip-append-to-body="true"
                     type="text"
@@ -146,13 +146,13 @@
                 >
                 <p>
                     <span class="field-note">
-                         The port number on which the NoSQL database listens
+                         The port number to connect to ElasticSearch or OpenSearch
                     </span>
                 </p>
                 <div class="error-container">
-            <span ng-show="es.port.$error.required">
-                You must enter a valid Port. Please check the syntax and try again.
-            </span>
+                    <span ng-show="es.port.$error.required">
+                        You must enter a valid Port. Please check the syntax and try again.
+                    </span>
                 </div>
             </div>
         </div>
@@ -160,7 +160,7 @@
         <div class="row form-row">
             <div class="col-m-4">
                 <label class="form-label required" for="prefix">
-                    NoSQL Database Index Prefix
+                    Search Index Prefix
                 </label>
             </div>
             <div class="col-m-8">
@@ -168,7 +168,7 @@
                     id="prefix"
                     class="form-el-input"
                     tooltip-placement="right"
-                    tooltip="Prefix used to create NoSQL indices"
+                    tooltip="Enter a prefix for database tables created in this installation. Use letters, numbers or underscores, and begin with a letter (Ex: ‘mg1_’). Table prefix length can't be more than 5 characters."
                     tooltip-trigger="focus"
                     tooltip-append-to-body="true"
                     ng-class="{'invalid': elasticsearch.prefix.$invalid && elasticsearch.submitted}"
@@ -179,13 +179,13 @@
                 >
                 <p>
                     <span class="field-note">
-                         A prefix added to the index names in the NoSQL database. Useful to differentiate multiple Mage-OS installations using the same NoSQL server.
+                         A prefix to add to search index names for this Mage-OS install. Use this to differentiate multiple Mage-OS installations using the same server.
                     </span>
                 </p>
                 <div class="error-container">
-            <span ng-show="elasticsearch.prefix.$error.required">
-                You must enter a valid prefix name. Please check the syntax and try again.
-            </span>
+                    <span ng-show="elasticsearch.prefix.$error.required">
+                        You must enter a valid prefix name. Please check the syntax and try again.
+                    </span>
                 </div>
             </div>
         </div>
@@ -193,7 +193,7 @@
         <div class="row form-row">
             <div class="col-m-4">
                 <label class="form-label" for="timeout">
-                    NoSQL Database Connection Timeout
+                    Search Engine Timeout
                 </label>
             </div>
             <div class="col-m-8">
@@ -201,7 +201,7 @@
                     id="timeout"
                     class="form-el-input"
                     tooltip-placement="right"
-                    tooltip="Enter a prefix for database tables created in this installation. Use letters, numbers or underscores, and begin with a letter (Ex: ‘mg1_’). Table prefix length can't be more than 5 characters."
+                    tooltip="Stop waiting for the search engine if it doesn't respond within this number of seconds"
                     tooltip-trigger="focus"
                     tooltip-append-to-body="true"
                     type="text"
@@ -211,7 +211,7 @@
                 >
                 <p>
                     <span class="field-note">
-                         The maximum number of seconds Mage-OS will wait for a response from the NoSQL database before timing out
+                         The maximum number of seconds Mage-OS should wait for the search engine before timing out
                     </span>
                 </p>
             </div>
@@ -221,7 +221,7 @@
         <div class="row form-row">
             <div class="col-m-4">
                 <label class="form-label">
-                    NoSQL Database HTTP Auth
+                    Search Engine HTTP Auth
                 </label>
             </div>
             <div class="col-m-8">
@@ -237,7 +237,7 @@
                     <label class="form-label" for="httpsFront">
                         Yes <br />
                         <span class="legend-note">
-                             Authentication credentials for accessing the NoSQL database, if it's protected by HTTP authentication
+                             Authentication credentials for connecting to ElasticSearch or OpenSearch, if it's protected by HTTP authentication
                         </span>
                     </label>
                 </div>
@@ -248,7 +248,7 @@
         <div class="row form-row" ng-show="useBasicAuth()">
             <div class="col-m-4">
                 <label class="form-label" for="username">
-                    NoSQL Auth HTTP Username
+                    Search Engine HTTP Username
                 </label>
             </div>
             <div class="col-m-8">
@@ -256,7 +256,7 @@
                     id="username"
                     class="form-el-input"
                     tooltip-placement="right"
-                    tooltip="Enter a prefix for database tables created in this installation. Use letters, numbers or underscores, and begin with a letter (Ex: ‘mg1_’). Table prefix length can't be more than 5 characters."
+                    tooltip="HTTP Authentication username for ElasticSearch or OpenSearch"
                     tooltip-trigger="focus"
                     tooltip-append-to-body="true"
                     type="text"
@@ -270,7 +270,7 @@
         <div class="row form-row" ng-show="useBasicAuth()">
             <div class="col-m-4">
                 <label class="form-label" for="password">
-                    NoSQL Auth HTTP Password
+                    Search Engine HTTP Password
                 </label>
             </div>
             <div class="col-m-8">
@@ -278,7 +278,7 @@
                     id="password"
                     class="form-el-input"
                     tooltip-placement="right"
-                    tooltip="Enter a prefix for database tables created in this installation. Use letters, numbers or underscores, and begin with a letter (Ex: ‘mg1_’). Table prefix length can't be more than 5 characters."
+                    tooltip="HTTP Authentication password for ElasticSearch or OpenSearch"
                     tooltip-trigger="focus"
                     tooltip-append-to-body="true"
                     type="text"
