@@ -31,10 +31,10 @@ class LandingInstaller extends AbstractActionController
      */
     public function indexAction()
     {
-        $welcomeMsg = "Welcome to MageOS Web Installer, your online store headquarters.<br>"
-            . "Click 'Agree and Set Up MageOS' or read ";
+        $welcomeMsg = "Welcome to Mage-OS Web Installer, your online store headquarters.<br>"
+            . "Click 'Agree and Set Up Mage-OS' or read ";
         $docRef = "http://devdocs.magento.com/guides/v1.0/install-gde/install/install-web.html";
-        $agreeButtonText = "Agree and Install MageOS";
+        $agreeButtonText = "Agree and Install Mage-OS";
         $view = new ViewModel;
         $view->setTerminal(true);
         $view->setTemplate('/magento/setup/landing.phtml');

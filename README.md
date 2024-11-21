@@ -1,6 +1,6 @@
-# MageOS - Web Installer - beta release
+# Mage-OS - Web Installer - beta release
 
-This is a BETA release for MageOS web installer.
+This is a BETA release for Mage-OS web installer.
 
 ## How to test this module
 

@@ -5,11 +5,9 @@
  */
 
 // @codingStandardsIgnoreFile
-
-$this->display_exceptions = true;
 ?>
 <header class="header">
-    <img class="logo" src="<?= $this->basePath() ?>/pub/images/magento-icon.svg" alt="Magento"/>
+    <img class="logo" src="<?= $this->basePath() ?>/pub/images/mageos/logo.svg" alt="Mage-OS"/>
     <h1 class="header-title">A 404 error occurred</h1>
 </header>
 
@@ -60,7 +58,7 @@ $this->display_exceptions = true;
 
 <?php endif ?>
 
-<?php //if ( isset( $this->display_exceptions ) && $this->display_exceptions ): ?>
+<?php if ( isset( $this->display_exceptions ) && $this->display_exceptions ): ?>
 
     <?php if ( isset( $this->exception ) && $this->exception instanceof Exception ): ?>
         <hr/>
@@ -122,4 +120,4 @@ $this->display_exceptions = true;
 
     <?php endif ?>
 
-<?php //endif ?>
+<?php endif ?>

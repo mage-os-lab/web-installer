@@ -7,7 +7,7 @@
 return [
     'view_manager' => [
         'display_not_found_reason' => false,
-        'display_exceptions'       => false,
+        'display_exceptions'       => true,
         'doctype'                  => 'HTML5',
         'not_found_template'       => 'error/404',
         'exception_template'       => 'error/index',
